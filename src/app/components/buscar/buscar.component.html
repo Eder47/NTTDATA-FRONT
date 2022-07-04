@@ -1,0 +1,34 @@
+<div class="container">
+  <br />
+  <ng-container>
+        <fieldset>
+          <h4 style="text-align:center">Consultar Cliente</h4>
+          <form [formGroup]="formDatosCliente" validate>
+            <div class="row">
+              <div class="col-md-12">
+                <mat-label>Tipo Documento</mat-label>
+                <mat-form-field id="id" class="form-group generic-width-input">
+                  <mat-select type="text" formControlName="tipoDocumento" required>
+                    <mat-option value="">
+                      <small>--selecionar--</small>
+                    </mat-option>
+                    <mat-option *ngFor="let tipoDocumento of tiposDocumentoCliente"  [value]="tipoDocumento.id">
+                      <small>{{tipoDocumento.nombre}}</small>
+                    </mat-option>
+                  </mat-select>
+                  <mat-error>Requerido*</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-12">
+                <mat-form-field id="id" class="form-group generic-width-input">
+                  <mat-label>Número Documento</mat-label><br>
+                  <input matInput type="number" formControlName="numeroDocumento" required>
+                  <mat-error>Requerido*</mat-error>
+                </mat-form-field>
+              </div>
+              <div> <button mat-button color="primary" (click)="submitCliente()">Buscar</button></div>
+            </div>
+          </form>
+        </fieldset>
+  </ng-container>
+</div>

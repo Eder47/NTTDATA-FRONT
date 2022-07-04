@@ -1,0 +1,23 @@
+<div class="container">
+  <br />
+  <ng-container>
+    <fieldset>
+      <h4 style="text-align:center">Datos Cliente</h4>
+      <form [formGroup]="formDatosCliente" validate >
+        <div class="col-md-6">
+          <mat-form-field id="id" class="form-group generic-width-input">
+            <label>Primer Apellido</label>
+            <input matInput type="text" formControlName="primerApellido">
+          </mat-form-field>
+          <div class="col-md-6">
+            <mat-form-field id="id" class="form-group generic-width-input">
+              <label>Primer Nombre</label>
+              <input matInput type="text" formControlName="primerNombre">
+            </mat-form-field>
+          </div>
+          <div> <button mat-button color="primary" (click)="regresar()">Regresar</button></div>
+          </div>
+      </form>
+    </fieldset>
+  </ng-container>
+</div>

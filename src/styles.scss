@@ -1,0 +1,636 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/theming';
+
+// Define configuracion de tipografia personalizada que sobreescribe la font-family 'Roboto, monospace'
+// niveles `headlines` y `body-1`.
+$fuente-personalizada: mat-typography-config(
+  $font-family: 'Source Sans Pro, Source, Helvetica, Arial, sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@include mat-core($fuente-personalizada);
+
+
+.h3-color {
+    color: white !important;
+}
+
+.fna-dialog-title {
+    font-weight: bold;
+}
+
+.fna-banner {
+    padding: 1.5em 3em;
+    background-color: #3C67DE;
+}
+
+.generic-width-input {
+    min-width: 150px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.fna-btn {
+    border-radius: 10px !important;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    color: #fff !important;
+    background-image: linear-gradient(to right, #3c67dd, #3c67dd) !important;
+    /*text-transform: uppercase;*/
+}
+
+.fna-btn:hover {
+    color: #fff !important;
+    background-image: linear-gradient(to right, #2e6da4, #2e6da4) !important;
+}
+
+/**
+ * Colores para los botones de toda la aplicación, extraídos del portal fna.gov.co
+ */
+.btn-primary {
+  background: #3c67de !important;
+  color: #fff !important;
+}
+.btn-primary:hover {
+  background: #5683ff !important;
+  color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.table-thead {
+    /* background-color: #3886D9; */
+}
+
+.table-th-color {
+    /* color: white !important; */
+    padding-left: 30px !important;
+}
+
+.tr_center {
+    padding-left: 30px !important;
+}
+
+/*
+ * Bordes de arriba y abajo de cada tabla
+ */
+.bordeTablaSuperior {
+  height: 4pt;
+  color: #5c5c5c;
+  background-color: #5c5c5c;
+}
+
+.bordeTablaInferior {
+  height: 2pt;
+  color: #5c5c5c;
+  background-color: #5c5c5c;
+}
+
+.left-8 {
+    position: relative;
+    left: 8px;
+}
+
+
+/* estilo para el contenedor dor contraste, aumento y disminución de letra   */
+
+.fna-widget {
+    border: 0 !important;
+    margin: 0 !important;
+    position: fixed !important;
+    border-radius: 0 !important;
+    top: 22%;
+    right: 0;
+    transform: translate(0, -50%);
+    z-index: 100000;
+    transition: all .3s ease-in;
+}
+
+.fna-widget .container {
+    background-color: #f8f8f8;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .3);
+    width: auto !important;
+}
+
+.fna-widget .container tr {
+    display: flex;
+    flex-direction: column;
+    width: auto !important;
+    align-items: center;
+}
+
+.fna-widget .container tr td {
+    width: auto !important;
+}
+
+.fna-widget .container tr td * {
+    margin: 0 !important;
+}
+
+.fna-widget #fontMenos {
+    top: 0 !important;
+}
+
+.fna-widget tr td:last-child {
+    margin: 13px 0;
+}
+
+.fna-widget.fna-widget-hidden {
+    transform: translate(100%, -50%);
+}
+
+.fna-widget-toggle-btn {
+    --toggle-btn-size: 28px;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    width: var(--toggle-btn-size);
+    height: var(--toggle-btn-size);
+    right: 100%;
+    top: 0;
+    background-color: #f8f8f8;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .3);
+    z-index: -1;
+}
+
+.fna-widget-toggle-btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(var(--toggle-btn-size) - 17px);
+    height: calc(var(--toggle-btn-size) - 17px);
+    border: 2px solid #4e4e4e;
+    border-bottom: 0;
+    border-right: 0;
+    top: 50%;
+    left: 58%;
+    transform: rotate(-45deg) translate(-50%, -50%);
+    transform-origin: 0 0;
+    box-sizing: border-box;
+}
+
+.mat-dialog-container {
+    padding: 10px !important;
+    border-collapse: collapse !important;
+    border-radius: 1em !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    margin: 0 auto,
+    //height: 100% !important;
+}
+
+.align-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-20 {
+    top: 20px;
+}
+
+.top-30 {
+    top: 30px;
+}
+
+.cdk-overlay-pane {
+    pointer-events: auto;
+    transform: translateY(22px) !important;
+}
+
+.texto-mayuscula {
+    text-transform: uppercase;
+}
+
+
+/* side bar*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #3C67DE;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/**
+* Genera un espacio entre botones.
+*/
+.espacioBotones {
+    left: 20px;
+    margin-left: 20px !important;
+}
+
+.espacioMargen {
+    position: relative;
+    top: 5px;
+}
+
+/*.mat-raised-button[disabled]:not([class*=mat-elevation-z]) {
+    /*cursor: progress;
+    color: #dedcdc !important;
+    background-image: linear-gradient(to right, #cad3e2, #cad3e2) !important;
+}*/
+
+.btn-datos-basicos[disabled] {
+    cursor: progress;
+}
+
+.h6-alerta{
+    color: #3050B0;
+    font-weight: bolder;
+}
+
+/* Estilo de check Activo*/
+.check-carta-activo {
+    padding: 0px 15px;
+}
+
+.form-line-separator {
+    border-top: 5px solid #CACACA;
+    margin-bottom: 0px;
+}
+
+.form-line-separator-title {
+    font-weight: bold;
+    color: #283a85;
+    line-height: 1.1;
+    font-size: 18px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-8 {
+    margin: 0px 8px;
+}
+
+/* ESTILOS PANEL - panel de información de solicitud (Nombre usuario y No. radicado) */
+.panel-info-gral div h6{
+    margin-bottom: 0px;
+    font-weight: bolder;
+}
+
+.panel-info-gral div p{
+    margin-bottom: 0px;
+}
+.panel-info-gral .col-md-6 {
+    padding: 0px;
+}
+.panel-info-gral .col-md-12 {
+    padding: 0px;
+}
+
+.panel-info-gral {
+    // z-index: 10;
+}
+
+.panel-info-sol {
+    padding-top: 10px !important;
+    // z-index: 10;
+}
+.panel-info-sol .col-md-1 {
+    padding: 0px;
+}
+.panel-info-sol .col-md-2 {
+    display: contents;
+}
+/* Estilo de botón buscar */
+.btn-buscar {
+    min-width: 0px !important;
+    font-size: 23px;
+    padding: 4px;
+    margin-left: 3px;
+    /* position: relative;
+    top: 3px; */
+}
+
+.info-sol {
+    padding-right: 3px;
+}
+
+.ion-ios-search:before {
+    font-weight: bolder;
+}
+/*fin ESTILOS PANEL*/
+
+/* Tamaño de botón para DatePicker */
+/*FIXME creando clase utilitaria con text align  right
+sobre el componente de directiva suffix ce maneja disposicion del icono */
+// .mat-form-field-suffix{
+//   width: 90px !important;
+// }
+
+/* Estilo de SNACKBAR para mensaje de error*/
+.toast-error {
+    background-color: rgb(208, 76, 71);
+    margin-bottom: 100px !important;
+    height: 63px;
+}
+.toast-error button {
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    position: relative;
+    right: -5px;
+}
+
+/* Estilo de SNACKBAR para mensaje de error*/
+.toast-success {
+    background-color: rgb(79, 179, 59);
+    margin-bottom: 100px !important;
+    height: 63px;
+}
+.toast-success button {
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    position: relative;
+    right: -5px;
+}
+/* fin estilos SNACKBAR*/
+
+.cursor-hand {
+  cursor: pointer;
+}
+
+/* Estilos ADMN CARTA GENERAL */
+.imagen-previsualizada {
+    height: 150px;
+    max-width: 100%;
+    border: 3px solid #51517b7a;
+}
+
+.imagen-selector {
+    cursor: pointer;
+}
+
+.margen-botones {
+    margin: 10px !important;
+}
+/*fin estilos ADMN CARTA GENERAL*/
+
+/* Corrección Spinner*/
+.black-overlay {
+    position: fixed !important;
+}
+
+/* Estilo Botón modificar en Administración*/
+.btn-modificar {
+    min-width: 5px !important;
+    color: #5683ff !important;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.btn-modificar[disabled] {
+    color: #5683ff !important;
+    background-color: #ffffff00;
+    cursor: default;
+}
+/* Fin Estilo Botón modificar en Administración*/
+
+.preguntas-container {
+    padding: 15px !important;
+}
+.preguntas-item {
+    margin: 5px 15px
+}
+
+/* Estilos en modulo Administracion */
+
+/* boton icon create */
+.lapicito {
+  color: black !important;
+}
+
+/**
+ * ============ colors ========
+ * En caso de ERROR
+ */
+ .alert {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.11);
+  display: table;
+  width: 100%;
+  padding: 8px !important;
+  /* height: 6em; */
+  /* min-height: 4em; */
+  margin-top: 15px;
+}
+
+.alert-white {
+  background-image: linear-gradient(to bottom, #fff, #f9f9f9);
+  color: #404040;
+  padding-left: 11em !important;
+  position: relative;
+}
+
+.alert-white.rounded {
+  border-radius: 8px 8px;
+  -webkit-border-radius: 8px 8px;
+}
+
+.alert-white.rounded .icon {
+  border-radius: 8px 0px 0px 8px;
+  -webkit-border-radius: 8px 0px 0px 8px;
+}
+
+.alert-white .icon {
+  text-align: center;
+  width: 10em;
+  height: 100%; /* 98% */
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  /* border: 1px solid; */
+  /* border-right: 1.5px solid #a94442; */
+  border-right: 0px solid;
+  border-bottom: 1.5px solid #b94a48;
+}
+
+.alert-white .icon i {
+  font-size: 20px;
+  color: #fff;
+  left: 12px;
+  position: absolute;
+  top: 50%;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  border: 1.5px solid #a94442;
+  color: #b94a48;
+}
+
+.alert-white.alert-danger .icon,
+.alert-white.alert-danger .icon:after {
+  border-color: #ca452e;
+  background: #ebdad7;
+}
+
+.alert-danger h5 {
+  color: #b94a48;
+  font-weight: bolder;
+}
+
+.err-icon {
+  height: 120%; /*70%;*/
+  width: 120%; /*70%; */
+  position: relative;
+  top: -9%; /*14%;*/
+  right: 10%;
+}
+.err-desc {
+  font-size: 1.0em;  /* 1.2 */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.err-titulo {
+  color: black;
+}
+
+.err-titulo h5{
+  width: 100%;
+  margin-bottom: 50px;
+  margin-left: 40px;
+  color: black;
+}
+
+mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+    text-align: left;
+}
+
+mat-header-cell, mat-cell {
+    text-align: center !important;
+    display: grid !important;
+  }
+
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+    padding: 0 10px !important;
+    font-size: 1.0em;
+}
+
+mat-cell, mat-footer-cell, mat-header-cell {
+    padding: 0 10px !important;
+}
+
+mat-cell:first-of-type, mat-footer-cell:first-of-type, mat-header-cell:first-of-type {
+    padding-left: 24px !important;
+}
+
+mat-cell:last-of-type, mat-footer-cell:last-of-type, mat-header-cell:last-of-type {
+    padding-right: 24px !important;
+}
+
+.mat-checkbox-layout { white-space: normal !important; }
+
+.mat-step-header {
+    pointer-events: none !important;
+}
+
+.fielSetCenter{
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 10px;
+
+    Legend {
+        border: medium none;
+        margin: 0 auto;
+        padding: 0 10px;
+        position: relative;
+        text-align: center;
+        width: auto;
+        color: #3C6EAC;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+    .mat-form-field-prefix .ng-star-inserted
+    {
+        width: 10px;
+    }
+
+}
+.min-widht-Auto
+{
+    min-width: auto;
+}
+/**
+* font utils
+*/
+.font-normal
+{
+    font-size: 1.12em;
+}
+
+/**
+* FIXME ajuste de columnas de diferetes tamños
+*/
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.display-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.w-rem4
+{
+  width: 4rem;
+  }

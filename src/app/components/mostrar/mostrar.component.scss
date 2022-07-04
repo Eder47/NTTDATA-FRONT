@@ -1,0 +1,59 @@
+form {
+  display: grid;
+  grid-template: auto auto auto 1fr / 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: flex-start;
+  border: 1px solid #1770c9;
+
+}
+
+mat-error{
+  color: red !important;
+}
+
+form input,
+form select {
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #1770c9;
+  height: 2.125rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  color: #574949;
+}
+
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+form input:focus {
+  box-shadow: 0 0 5px #3786da;
+  border: 1px solid #5887b9;
+}
+
+.color-novedad > a,
+.color-novedad > a > div {
+  height: 100%;
+  width: 100%;
+}
+
+form {
+  margin: 0 auto; /* Centramos el formulario */
+  width: 400px;   /* Sin ancho no podemos centrar el formulario */
+  background-color: rgb(241, 247, 248); /* Color blanco para el formulario */
+  padding: 2px; /* separamos los bordes del form del resto de elementos */
+  border-radius: 10px; /* Redondeamos los bordes del form */
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
